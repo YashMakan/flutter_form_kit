@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_form_kit/src/widgets/flutter_form_details.dart';
 import 'package:flutter_form_kit/src/widgets/form_type_widgets/phone_number.dart';
 
 class ContactInfo extends StatefulWidget {
@@ -37,6 +38,7 @@ class _ContactInfoState extends State<ContactInfo> {
   }
 
   contactInfoTextField(label, hint, context, controller) {
+    final themeColor = FlutterFormDetails.of(context).themeColor;
     final textTheme = Theme.of(context).textTheme;
     return Padding(
       padding: const EdgeInsets.only(bottom: 32),
@@ -52,16 +54,16 @@ class _ContactInfoState extends State<ContactInfo> {
             controller5.text,
           ]);
         },
-        cursorColor: const Color(0xFF0445af),
+        cursorColor: themeColor,
         decoration: InputDecoration(
             labelText: label,
             floatingLabelBehavior: FloatingLabelBehavior.always,
             labelStyle:
-                textTheme.headlineSmall?.copyWith(color: const Color(0xFF0445af)),
+                textTheme.headlineSmall?.copyWith(color: themeColor),
             floatingLabelAlignment: FloatingLabelAlignment.start,
             hintText: hint,
-            focusedBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF0445af)))),
+            focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: themeColor))),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_form_kit/src/widgets/flutter_form_details.dart';
 
 class PhoneNumber extends StatelessWidget {
   final bool showLabel;
@@ -16,6 +17,8 @@ class PhoneNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    final themeColor = FlutterFormDetails.of(context).themeColor;
+
     return Column(
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,7 +26,7 @@ class PhoneNumber extends StatelessWidget {
         if (showLabel) ...[
           Text(
             "Phone number",
-            style: textTheme.titleMedium?.copyWith(color: const Color(0xFF0445af)),
+            style: textTheme.titleMedium?.copyWith(color: themeColor),
           ),
         ],
         Row(
@@ -33,7 +36,7 @@ class PhoneNumber extends StatelessWidget {
               width: 72,
               child: TextField(
                 style: textTheme.headlineMedium,
-                cursorColor: const Color(0xFF0445af),
+                cursorColor: themeColor,
                 decoration: InputDecoration(
                     contentPadding: EdgeInsets.zero,
                     suffixIcon: const Icon(Icons.keyboard_arrow_down),
@@ -41,8 +44,8 @@ class PhoneNumber extends StatelessWidget {
                       "https://media.istockphoto.com/id/472317739/vector/flag-of-india.jpg?s=612x612&w=0&k=20&c=ejlQRX4C_Mb40wz1JQcB5vKYcOKlfRtry2W6UcX6mlo=",
                       width: 16,
                     ),
-                    focusedBorder: const UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF0445af)))),
+                    focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: themeColor))),
               ),
             ),
             const SizedBox(width: 16),
@@ -52,13 +55,13 @@ class PhoneNumber extends StatelessWidget {
                 onChanged: onChanged,
                 controller: controller,
                 onSubmitted: onSubmitted,
-                cursorColor: const Color(0xFF0445af),
+                cursorColor: themeColor,
                 decoration: InputDecoration(
                     hintText: !showLabel
                         ? "Type your phone number here..."
                         : "(205) 555-013",
-                    focusedBorder: const UnderlineInputBorder(
-                        borderSide: BorderSide(color: Color(0xFF0445af)))),
+                    focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: themeColor))),
               ),
             ),
           ],

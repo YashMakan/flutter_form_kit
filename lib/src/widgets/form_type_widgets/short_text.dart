@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_form_kit/src/widgets/flutter_form_details.dart';
 
 class ShortText extends StatelessWidget {
   final Function(String) onChanged;
@@ -14,16 +15,18 @@ class ShortText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    final themeColor = FlutterFormDetails.of(context).themeColor;
+
     return TextField(
       onChanged: onChanged,
       controller: controller,
       onSubmitted: onSubmitted,
       style: textTheme.headlineMedium,
-      cursorColor: const Color(0xFF0445af),
-      decoration: const InputDecoration(
+      cursorColor: themeColor,
+      decoration: InputDecoration(
           hintText: "Type your answer here...",
           focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Color(0xFF0445af)))),
+              borderSide: BorderSide(color: themeColor))),
     );
   }
 }

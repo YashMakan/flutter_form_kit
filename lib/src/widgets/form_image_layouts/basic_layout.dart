@@ -18,6 +18,7 @@ class BasicLayout extends StatelessWidget {
     final onPageSubmitted = FlutterFormDetails.of(context).onPageSubmitted;
     final onFormSubmitted = FlutterFormDetails.of(context).onFormSubmitted;
     final pagesLength = FlutterFormDetails.of(context).pagesLength;
+    final themeColor = FlutterFormDetails.of(context).themeColor;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisSize: MainAxisSize.min,
@@ -27,12 +28,12 @@ class BasicLayout extends StatelessWidget {
             Text(
               "${index + 1}",
               style: textTheme.bodyMedium
-                  ?.copyWith(color: const Color(0xFF0445af)),
+                  ?.copyWith(color: themeColor),
             ),
-            const Icon(
+            Icon(
               Icons.arrow_forward,
               size: 18,
-              color: Color(0xFF0445af),
+              color: themeColor,
             ),
             const SizedBox(width: 8),
             Text(
@@ -86,7 +87,7 @@ class BasicLayout extends StatelessWidget {
                   }else {
                     onPageSubmitted(index);
                   }
-                },
+                }, themeColor: themeColor,
               ),
             ),
             const SizedBox(width: 16),

@@ -28,6 +28,7 @@ class _FlutterFormState extends State<FlutterForm> {
     return ResponsiveSizer(
         builder: (context, orientation, device) => FlutterFormDetails(
               pages: widget.form.pages,
+              themeColor: widget.form.themeColor ?? const Color(0xFF0445af),
               onFormSubmitted: (pages) {
                 widget.form.onFormSubmitted(pages);
               },
@@ -75,13 +76,17 @@ class _FlutterFormState extends State<FlutterForm> {
                               pagesLength: widget.form.pages.length,
                               onPageChanged: (index) =>
                                   setState(() => currentIndex = index)),
-                          const SizedBox(width: 12),
-                          CustomButton(
-                            text: "Powered by FlutterForm",
-                            onTap: () {},
-                            style: textTheme.bodyMedium
-                                ?.copyWith(color: Colors.white),
-                          ),
+                          if(widget.form.showLogo)...[
+                            const SizedBox(width: 12),
+                            CustomButton(
+                              text: widget.form.logo ?? "Powered by FlutterForm",
+                              onTap: () {},
+                              themeColor: widget.form.themeColor ??
+                                  const Color(0xFF0445af),
+                              style: textTheme.bodyMedium
+                                  ?.copyWith(color: Colors.white),
+                            ),
+                          ]
                         ],
                       ),
                       body: PageView.builder(

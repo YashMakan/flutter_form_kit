@@ -5,13 +5,14 @@ class CustomButton extends StatelessWidget {
   final String text;
   final TextStyle? style;
   final Function() onTap;
+  final Color themeColor;
 
   const CustomButton(
       {super.key,
       this.suffixIcon,
       required this.text,
       required this.style,
-      required this.onTap});
+      required this.onTap, required this.themeColor});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class CustomButton extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
             padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
             foregroundColor: Colors.white,
-            backgroundColor: const Color(0xFF0445af)),
+            backgroundColor: themeColor),
         onPressed: onTap,
         child: Row(
           mainAxisSize: MainAxisSize.min,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_form_kit/src/widgets/flutter_form_details.dart';
 
 class Address extends StatefulWidget {
   final Function(List<String>) fields;
@@ -33,6 +34,7 @@ class _AddressState extends State<Address> {
 
   addressTextField(label, hint, context, controller) {
     final textTheme = Theme.of(context).textTheme;
+    final themeColor = FlutterFormDetails.of(context).themeColor;
     return Padding(
       padding: const EdgeInsets.only(bottom: 32),
       child: TextField(
@@ -48,15 +50,15 @@ class _AddressState extends State<Address> {
             controller6.text,
           ]);
         },
-        cursorColor: const Color(0xFF0445af),
+        cursorColor: themeColor,
         decoration: InputDecoration(
             labelText: label,
             floatingLabelBehavior: FloatingLabelBehavior.always,
-            labelStyle: const TextStyle(color: Color(0xFF0445af)),
+            labelStyle: TextStyle(color: themeColor),
             floatingLabelAlignment: FloatingLabelAlignment.start,
             hintText: hint,
-            focusedBorder: const UnderlineInputBorder(
-                borderSide: BorderSide(color: Color(0xFF0445af)))),
+            focusedBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: themeColor))),
       ),
     );
   }

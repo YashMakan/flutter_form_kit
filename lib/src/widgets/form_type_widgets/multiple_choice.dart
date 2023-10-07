@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_kit/src/models/page.dart';
+import 'package:flutter_form_kit/src/widgets/flutter_form_details.dart';
 
 class MultipleChoice extends StatefulWidget {
   final FlutterFormPage page;
@@ -26,6 +27,7 @@ class _MultipleChoiceState extends State<MultipleChoice> {
   }
 
   optionWidget(int index, String option, context) {
+    final themeColor = FlutterFormDetails.of(context).themeColor;
     final textTheme = Theme.of(context).textTheme;
     String alphabet = String.fromCharCode('A'.codeUnitAt(0) + index);
     return MouseRegion(
@@ -48,9 +50,9 @@ class _MultipleChoiceState extends State<MultipleChoice> {
           padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
           constraints: const BoxConstraints(minWidth: 200),
           decoration: BoxDecoration(
-              color: const Color(0xFF0445af)
+              color: themeColor
                   .withOpacity(hoveredIndex == index ? 0.2 : 0.1),
-              border: Border.all(color: const Color(0xFF0445af)),
+              border: Border.all(color: themeColor),
               borderRadius: BorderRadius.circular(4)),
           child: Row(
             mainAxisSize: MainAxisSize.min,
@@ -60,13 +62,13 @@ class _MultipleChoiceState extends State<MultipleChoice> {
                 height: 22,
                 decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(color: const Color(0xFF0445af)),
+                    border: Border.all(color: themeColor),
                     borderRadius: BorderRadius.circular(4)),
                 child: Center(
                     child: Text(
                   alphabet,
                   style: textTheme.bodySmall?.copyWith(
-                      color: const Color(0xFF0445af),
+                      color: themeColor,
                       fontWeight: FontWeight.bold),
                 )),
               ),
@@ -74,10 +76,10 @@ class _MultipleChoiceState extends State<MultipleChoice> {
               Text(
                 option,
                 style: textTheme.titleMedium
-                    ?.copyWith(color: const Color(0xFF0445af)),
+                    ?.copyWith(color: themeColor),
               ),
               if (widget.page.selectedOptions.contains(option))
-                const Icon(Icons.check, color: Color(0xFF0445af))
+                Icon(Icons.check, color: themeColor)
             ],
           ),
         ),

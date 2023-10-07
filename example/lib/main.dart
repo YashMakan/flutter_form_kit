@@ -20,6 +20,8 @@ class MyApp extends StatelessWidget {
       home: FlutterForm(
           form: FlutterFormData(
             name: "Survey Form",
+            themeColor: Colors.redAccent,
+            showLogo: false,
             pages: [
               FlutterFormPage(
                 heading: "Basic Information",

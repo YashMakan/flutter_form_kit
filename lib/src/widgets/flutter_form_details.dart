@@ -6,6 +6,7 @@ class FlutterFormDetails extends InheritedWidget {
   final Function(int, dynamic) onPageChanged;
   final Function(int) onPageSubmitted;
   final Function(List<FlutterFormPage>) onFormSubmitted;
+  final Color themeColor;
 
   int get pagesLength => pages.length;
 
@@ -15,6 +16,7 @@ class FlutterFormDetails extends InheritedWidget {
     required this.onPageChanged,
     required this.onPageSubmitted,
     required this.onFormSubmitted,
+    required this.themeColor,
     required Widget child,
   }) : super(child: child);
 

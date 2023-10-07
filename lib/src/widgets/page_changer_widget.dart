@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'flutter_form_details.dart';
+
 class PageChangeWidget extends StatelessWidget {
   final PageController controller;
   final int index;
@@ -30,14 +32,14 @@ class PageChangeWidget extends StatelessWidget {
             }
           },
           child: Container(
-            decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
+            decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(4),
                   topRight: Radius.circular(0),
                   bottomLeft: Radius.circular(4),
                   bottomRight: Radius.circular(0),
                 ),
-                color: Color(0xFF0445af)),
+                color: FlutterFormDetails.of(context).themeColor),
             width: 32,
             height: 32,
             child: const Icon(
@@ -59,14 +61,14 @@ class PageChangeWidget extends StatelessWidget {
             }
           },
           child: Container(
-            decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
+            decoration: BoxDecoration(
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(0),
                   topRight: Radius.circular(4),
                   bottomLeft: Radius.circular(0),
                   bottomRight: Radius.circular(4),
                 ),
-                color: Color(0xFF0445af)),
+                color: FlutterFormDetails.of(context).themeColor),
             width: 32,
             height: 32,
             child: const Icon(
