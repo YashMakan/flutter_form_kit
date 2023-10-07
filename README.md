@@ -16,6 +16,10 @@ An Open Source alternative of Typeform for building beautiful forms with customi
 
 [![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
+## Simple integration:
+Adding the form is quite easy, check out the example project to learn more.
+![Code](./images/code.png)
+
 ## Form Support:
 
 - in Between: A form element positioned between other elements.
