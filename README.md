@@ -8,7 +8,7 @@ An Open Source alternative of Typeform for building beautiful forms with customi
 |-------------------------------|-------------------------------|-------------------------------|
 | ![Demo 1](./images/demo1.png) | ![Demo 2](./images/demo2.png) | ![Demo 3](./images/demo3.png) |
 
-| **_Demo Image_**              | **_Image 5_**                 |
+| **_Image 4_**                 | **_Image 5_**                 |
 |-------------------------------|-------------------------------|
 | ![Demo 4](./images/demo4.png) | ![Demo 5](./images/demo5.png) |
 
