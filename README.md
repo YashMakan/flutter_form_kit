@@ -14,13 +14,13 @@ An Open Source alternative of Typeform for building beautiful forms with customi
 
 ## Complete Package YouTube Video Process
 
-[![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Demo Video](https://img.youtube.com/vi/4e663NoHtvg/0.jpg)](https://www.youtube.com/watch?v=4e663NoHtvg)
 
 ## Simple integration:
 Adding the form is quite easy, check out the example project to learn more.
 ![Code](./images/code.png)
 
-## Form Support:
+## Image Layout Support:
 
 - in Between: A form element positioned between other elements.
 - right: A form element aligned to the right.
@@ -29,7 +29,7 @@ Adding the form is quite easy, check out the example project to learn more.
 - left Expanded: A form element expanded and aligned to the left.
 - background: A form element used as a background element.
 
-## Image Layout Support:
+## Form Support:
 
 - short Text: Layout for short text.
 - multiple Choice: Layout for multiple-choice options.
@@ -42,6 +42,7 @@ Adding the form is quite easy, check out the example project to learn more.
 ## Todo:
 - ~~Web Support~~
 - ~~Image Layouts~~
+- Validations
 - Theme customization
 - Add more answer layouts
 - Mobile Support
