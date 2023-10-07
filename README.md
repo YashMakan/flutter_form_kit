@@ -1,9 +1,11 @@
 # flutter_form_kit
 
-An Open Source Alternative of Typeform for building forms
+![FlutterForm](./images/FlutterForm.png)
+
+An Open Source alternative of Typeform for building beautiful forms with customizations.
 
 ## Complete Package YouTube Video Process
-[![Alt text](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
 ## Form Support:
 
