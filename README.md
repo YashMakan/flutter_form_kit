@@ -39,6 +39,13 @@ Adding the form is quite easy, check out the example project to learn more.
 - long Text: Layout for longer text.
 - yes No: Layout for yes or no options.
 
+## Todo:
+- ~~Web Support~~
+- ~~Image Layouts~~
+- Theme customization
+- Add more answer layouts
+- Mobile Support
+
 ## Give a 🤩 to the repository
 
 If you find the project helpful, make sure to give a shiny star 🌟
