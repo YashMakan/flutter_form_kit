@@ -1,16 +1,16 @@
 # flutter_form_kit
 
-![FlutterForm](./images/FlutterForm.png)
+![FlutterForm](https://raw.githubusercontent.com/YashMakan/flutter_form_kit/main/images/FlutterForm.png)
 
 An Open Source alternative of Typeform for building beautiful forms with customizations.
 
-| **_Image 1_**                 | **_Image 2_**                 | **_Image 3_**                 |
-|-------------------------------|-------------------------------|-------------------------------|
-| ![Demo 1](./images/demo1.png) | ![Demo 2](./images/demo2.png) | ![Demo 3](./images/demo3.png) |
+| **_Image 1_**                                                                                 | **_Image 2_**                                                                                 | **_Image 3_**                                                                                 |
+|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| ![Demo 1](https://raw.githubusercontent.com/YashMakan/flutter_form_kit/main/images/demo1.png) | ![Demo 2](https://raw.githubusercontent.com/YashMakan/flutter_form_kit/main/images/demo2.png) | ![Demo 3](https://raw.githubusercontent.com/YashMakan/flutter_form_kit/main/images/demo3.png) |
 
-| **_Image 4_**                 | **_Image 5_**                 |
-|-------------------------------|-------------------------------|
-| ![Demo 4](./images/demo4.png) | ![Demo 5](./images/demo5.png) |
+| **_Image 4_**                                                                                 | **_Image 5_**                                                                                 |
+|-----------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
+| ![Demo 4](https://raw.githubusercontent.com/YashMakan/flutter_form_kit/main/images/demo4.png) | ![Demo 5](https://raw.githubusercontent.com/YashMakan/flutter_form_kit/main/images/demo5.png) |
 
 ## Complete Package YouTube Video Process
 
@@ -18,7 +18,7 @@ An Open Source alternative of Typeform for building beautiful forms with customi
 
 ## Simple integration:
 Adding the form is quite easy, check out the example project to learn more.
-![Code](./images/code.png)
+![Code](https://raw.githubusercontent.com/YashMakan/flutter_form_kit/main/images/code.png)
 
 ## Image Layout Support:
 
@@ -43,7 +43,7 @@ Adding the form is quite easy, check out the example project to learn more.
 - ~~Web Support~~
 - ~~Image Layouts~~
 - Validations
-- Theme customization
+- more Theme customization
 - Add more answer layouts
 - Mobile Support
 

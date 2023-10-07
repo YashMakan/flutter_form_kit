@@ -1,6 +1,6 @@
 name: flutter_form_kit
 description: FlutterFormKit -  An OpenSource Typeform Alternative made using Flutter
-version: 0.0.1
+version: 0.0.3
 homepage: https://github.com/YashMakan/flutter_form_kit
 
 environment:
