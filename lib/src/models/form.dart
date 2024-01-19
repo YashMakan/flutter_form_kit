@@ -8,6 +8,7 @@ class FlutterFormData {
   final String? logo;
   final bool showLogo;
   final Color backgroundColor;
+  final Duration pageTransitionDuration = const Duration(seconds: 2);
   List<FlutterFormPage> pages;
   final Function(FlutterFormPage page) onPageEdited;
   final Function(List<FlutterFormPage> pages) onFormSubmitted;
