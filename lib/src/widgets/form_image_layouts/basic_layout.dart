@@ -8,7 +8,8 @@ class BasicLayout extends StatelessWidget {
   final bool showInline;
   final int pageIndex;
 
-  const BasicLayout({super.key, this.showInline = false, required this.pageIndex});
+  const BasicLayout(
+      {super.key, this.showInline = false, required this.pageIndex});
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +28,7 @@ class BasicLayout extends StatelessWidget {
           children: [
             Text(
               "${index + 1}",
-              style: textTheme.bodyMedium
-                  ?.copyWith(color: themeColor),
+              style: textTheme.bodyMedium?.copyWith(color: themeColor),
             ),
             Icon(
               Icons.arrow_forward,
@@ -82,12 +82,13 @@ class BasicLayout extends StatelessWidget {
                 style: textTheme.headlineSmall?.copyWith(color: Colors.white),
                 suffixIcon: index == pagesLength - 1 ? null : Icons.check,
                 onTap: () {
-                  if(index == pagesLength - 1) {
+                  if (index == pagesLength - 1) {
                     onFormSubmitted(FlutterFormDetails.of(context).pages);
-                  }else {
+                  } else {
                     onPageSubmitted(index);
                   }
-                }, themeColor: themeColor,
+                },
+                themeColor: themeColor,
               ),
             ),
             const SizedBox(width: 16),

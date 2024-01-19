@@ -19,28 +19,30 @@ class SideLayout extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            if (!isRight)
-              (page.image != null)
-                  ? Image.network(
-                      page.image!,
-                      width: 25.w,
-                      height: 25.h,
-                      fit: BoxFit.cover,
-                    )
-                  : const SizedBox(),
+            if (Device.screenType == ScreenType.tablet)
+              if (!isRight)
+                (page.image != null)
+                    ? Image.network(
+                        page.image!,
+                        width: 25.w,
+                        height: 25.h,
+                        fit: BoxFit.cover,
+                      )
+                    : const SizedBox(),
             SizedBox(
-              width: 40.w,
+              width: Device.screenType == ScreenType.tablet ? 40.w : 90.w,
               child: BasicLayout(pageIndex: index),
             ),
-            if (isRight)
-              (page.image != null)
-                  ? Image.network(
-                      page.image!,
-                      width: 25.w,
-                      height: 25.h,
-                      fit: BoxFit.cover,
-                    )
-                  : const SizedBox(),
+            if (Device.screenType == ScreenType.tablet)
+              if (isRight)
+                (page.image != null)
+                    ? Image.network(
+                        page.image!,
+                        width: 25.w,
+                        height: 25.h,
+                        fit: BoxFit.cover,
+                      )
+                    : const SizedBox(),
           ],
         ),
       ),
