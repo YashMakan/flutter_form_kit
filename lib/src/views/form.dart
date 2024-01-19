@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_form_kit/src/models/choice_option.dart';
 import 'package:flutter_form_kit/src/models/form.dart';
 import 'package:flutter_form_kit/src/widgets/custom_button.dart';
 import 'package:flutter_form_kit/src/widgets/flutter_form_details.dart';
@@ -45,7 +46,7 @@ class _FlutterFormState extends State<FlutterForm> {
                       cursorPosition;
                 } else if (value.runtimeType == List) {
                   widget.form.pages[currentIndex].selectedOptions =
-                      List<String>.from(value);
+                      List<ChoiceOption>.from(value);
                 }
                 currentIndex = index;
                 setState(() {});
@@ -76,10 +77,11 @@ class _FlutterFormState extends State<FlutterForm> {
                               pagesLength: widget.form.pages.length,
                               onPageChanged: (index) =>
                                   setState(() => currentIndex = index)),
-                          if(widget.form.showLogo)...[
+                          if (widget.form.showLogo) ...[
                             const SizedBox(width: 12),
                             CustomButton(
-                              text: widget.form.logo ?? "Powered by FlutterForm",
+                              text:
+                                  widget.form.logo ?? "Powered by FlutterForm",
                               onTap: () {},
                               themeColor: widget.form.themeColor ??
                                   const Color(0xFF0445af),

@@ -32,13 +32,28 @@ class MyApp extends StatelessWidget {
             answerType: AnswerType.shortText,
           ),
           FlutterFormPage(
-              heading: "Favorite Color",
-              description: "What's your favorite color?",
-              imageLayout: ImageLayout.rightExpanded,
-              image:
-                  "https://images.unsplash.com/photo-1533109721025-d1ae7ee7c1e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
-              answerType: AnswerType.multipleChoice,
-              options: ["Red", "Blue", "Green"]),
+            heading: "Favorite Color",
+            description: "What's your favorite color?",
+            imageLayout: ImageLayout.rightExpanded,
+            image:
+                "https://images.unsplash.com/photo-1533109721025-d1ae7ee7c1e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80",
+            answerType: AnswerType.singleChoice,
+            options: [
+              ChoiceOption(
+                label: "Red",
+                value: "red",
+                image: "https://picsum.photos/300/200",
+              ),
+              ChoiceOption(
+                label: "Green",
+                value: "green",
+              ),
+              ChoiceOption(
+                label: "Yellow",
+                value: "yellow",
+              ),
+            ],
+          ),
           FlutterFormPage(
             heading: "Contact Information",
             description: "Let us know how to reach you.",

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_kit/src/constants/enums.dart';
+import 'package:flutter_form_kit/src/models/choice_option.dart';
 
 class FlutterFormPage {
   final String heading;
@@ -7,9 +8,16 @@ class FlutterFormPage {
   final String? image;
   final AnswerType answerType;
   final ImageLayout? imageLayout;
-  List<String>? options;
+  /// The options for the form page.
+  /// Example:
+  /// {
+  ///   "label": "Red",
+  ///   "value": "red",
+  ///   "image": "https://images.unsplash.com/photo-15795469" // Optional
+  /// }
+  List<ChoiceOption>? options;
   TextEditingController controller = TextEditingController();
-  List<String> selectedOptions = [];
+  List<ChoiceOption> selectedOptions = [];
   List<String> formField = [];
 
   FlutterFormPage({
