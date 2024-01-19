@@ -8,7 +8,7 @@ class FlutterFormData {
   final String? logo;
   final bool showLogo;
   final Color backgroundColor;
-  final Duration pageTransitionDuration = const Duration(seconds: 2);
+  final Duration pageTransitionDuration;
   List<FlutterFormPage> pages;
   final Function(FlutterFormPage page) onPageEdited;
   final Function(List<FlutterFormPage> pages) onFormSubmitted;
@@ -19,6 +19,7 @@ class FlutterFormData {
       this.themeColor,
       this.logo,
       this.backgroundColor = Colors.white,
+      this.pageTransitionDuration = const Duration(seconds: 2),
       this.showLogo = true,
       required this.onPageEdited,
       required this.onFormSubmitted});
