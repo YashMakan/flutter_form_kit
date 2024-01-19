@@ -14,7 +14,7 @@ class InBetweenLayout extends StatelessWidget {
       height: 100.h,
       child: Center(
         child: SizedBox(
-          width: 40.w,
+          width: Device.screenType == ScreenType.tablet ? 40.w : 90.w,
           child: BasicLayout(showInline: true, pageIndex: index),
         ),
       ),

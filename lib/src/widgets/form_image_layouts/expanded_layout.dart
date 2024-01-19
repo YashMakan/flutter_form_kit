@@ -21,7 +21,7 @@ class ExpandedLayout extends StatelessWidget {
               : null),
       child: Center(
         child: SizedBox(
-          width: 40.w,
+          width: Device.screenType == ScreenType.tablet ? 40.w : 90.w,
           child: BasicLayout(pageIndex: index),
         ),
       ),

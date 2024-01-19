@@ -7,7 +7,8 @@ class SideExpandedLayout extends StatelessWidget {
   final int index;
   final bool isRight;
 
-  const SideExpandedLayout({super.key, this.isRight = true, required this.index});
+  const SideExpandedLayout(
+      {super.key, this.isRight = true, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -18,30 +19,32 @@ class SideExpandedLayout extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          if (!isRight)
-            (page.image != null)
-                ? Image.network(
-                    page.image!,
-                    width: 50.w,
-                    height: 100.h,
-                    fit: BoxFit.cover,
-                  )
-                : const SizedBox(),
+          if (Device.screenType == ScreenType.tablet)
+            if (!isRight)
+              (page.image != null)
+                  ? Image.network(
+                      page.image!,
+                      width: 50.w,
+                      height: 100.h,
+                      fit: BoxFit.cover,
+                    )
+                  : const SizedBox(),
           Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 5.w),
               child: BasicLayout(pageIndex: index),
             ),
           ),
-          if (isRight)
-            (page.image != null)
-                ? Image.network(
-                    page.image!,
-                    width: 50.w,
-                    height: 100.h,
-                    fit: BoxFit.cover,
-                  )
-                : const SizedBox(),
+          if (Device.screenType == ScreenType.tablet)
+            if (isRight)
+              (page.image != null)
+                  ? Image.network(
+                      page.image!,
+                      width: 50.w,
+                      height: 100.h,
+                      fit: BoxFit.cover,
+                    )
+                  : const SizedBox(),
         ],
       ),
     );
