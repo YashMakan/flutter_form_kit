@@ -67,7 +67,7 @@ class _FlutterFormState extends State<FlutterForm> {
                       }
                     },
                     child: Scaffold(
-                      backgroundColor: Colors.white,
+                      backgroundColor: widget.form.backgroundColor,
                       floatingActionButton: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
